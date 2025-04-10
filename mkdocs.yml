@@ -1,0 +1,39 @@
+site_name: LZBTH16's Portfolio
+site_url: https://somesite.com
+
+theme:
+  name: material
+  palette: 
+    scheme: slate
+    primary: deep purple
+    accent: deep purple
+  logo: logo.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.instant  # Optional: enables fast loading between pages
+    - navigation.tracking  # Optional: syncs scroll with URL fragment
+    - toc.integrate  # Ensures the table of contents follows the content
+  
+nav:
+  - Home: index.md
+  - About: about.md
+  - Projects: projects.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+extra:
+  navigation:
+    collapse: false
+    path: false
+    breadcrumbs: false
+
+extra_css:
+  - stylesheets/extra.css
