@@ -1,3 +1,8 @@
+---
+hide:
+    - navigation
+---
+
 # About Me
 
 Hi there! I'm **LZBTH16**, and here's a bit about who I am:
@@ -18,4 +23,4 @@ I thrive on challenges that let me explore the intersection of creativity and lo
 
 - Networking
 - Game development with Unity
-- Software engineering
+- Embedded systems
