@@ -6,7 +6,9 @@
 
 - ### Sim-ester | E-Commerce Website
     ---
-    Sim-ester is a website that was developed for the COSC304 project. It is an online store that sells products depicting simulation-style games based on courses at UBC Okanagan.
+    **Associated with:** UBC Okanagan - COSC 304
+
+    Developed a dynamic, database-integrated web application using Node.js, Express.js, and SQL. Key features included product listings, filtered search, order history, and administrative tools. Sim-ester placed 1st overall among over 100 projects in the course, demonstrating both technical proficiency and strong design.
 
     [Learn more](https://github.com/LZBTH16/sim-ester)
 
@@ -16,9 +18,11 @@
 
 - ### Collabium | Task Management App
     ---
-    Collabium is a task management system designed to help team efficiently manage tasks.
+    **Associated with:** UBC Okanagan - COSC 310
 
-    It includes role-based access, statistics, and administrative controls.
+    Collabium is a full-stack web application designed to help teams manage tasks efficiently with features like secure user authentication, role-based access, task filtering, and an admin dashboard. Built with React, Node.js, Express, and PostgreSQL, the system supports CI/CD, task notifications, and detailed team performance tracking.
+
+    While working on Collabium, I contributed to backend development (login system, task filtering) and frontend features (admin user management). I also played a key role in organizing the team’s workflow—maintaining documentation, keeping out Kanban board up to date with relevant tasks, coordinating meetings, and helping the team stay on schedule in an unofficial scrum master capacity.
 
     [Learn more](https://github.com/KianShirvani/Collabium---Task-Management-Platform)
 
@@ -28,7 +32,9 @@
 
 - ### AmazeBike | Unity WebGL Game
     ---
-    AmazeBike is a 3D bike racing game based on ExciteBike.
+    **Associated with:** UBC Okanagan - COSC 416
+    
+    Built collaboratively with a team of three for our COSC 416 final project, AmazeBike is a Unity-based 3D platformer inspired by Excitebike. Players race through two tracks of increasing difficulty, dodging mud pits and hitting speed boosts to finish with the best time possible. The game includes a tutorial, visual and audio effects, and a top-three leaderboard system to encourage replayability. Power-ups like immunity help players overcome obstacles, while fireworks and music add to the immersive experience.
 
     [Learn more](https://github.com/Zubdragon047/cosc416project)
     
@@ -39,57 +45,64 @@
 === "2024"
     <div class="grid cards" markdown>
 
-    - ### Kanban Website
+    - ### Kanban Website {data-toc-label=""}
         ---
         **Associated with:** Personal Project
 
         **Description:**
+        Built a responsive Kanban board for task management using HTML, CSS, and JavaScript. Features include draggable task cards and persistent local storage. Designed and implemented a custom API for task creation and data handling.
 
-        **Tech Stack:**
+        **Tech Stack:** HTML, CSS, JavaScript
 
-    - ### "Duckies" Mod
+    - ### "Duckies" Mod {data-toc-label=""}
         ---
         **Associated with:** Personal Project
 
         **Description:**
+        Created a Minecraft mod that adds a custom duck item and in-game object. Learned how to structure Minecraft assets and implement them into the actual game environment. Gained hands-on experience with game modding beyond test modes.
 
-        **Tech Stack:**
+        **Tech Stack:** Java, Kotlin, Gradle
     
-    - ### Internet 101
+    - ### Internet 101 {data-toc-label=""}
         ---
         **Associated with:** UBC Okanagan - COSC 101
 
         **Description:**
+        Led a team in developing a beginner-friendly website to teach essential internet skills and safety. As project lead, managed task delegation, set milestones, and coordinated team efforts from concept to deployment.
 
         **Tech Stack:** Node.js, React
+
+        **[GitHub Repository](https://github.com/Rheiley/cosc101-project)**
 
     </div>
 
 === "2023"
     <div class="grid cards" markdown>
 
-    - ### Wiki to SharePoint Migration
+    - ### Wiki to SharePoint Migration {data-toc-label=""}
         ---
         **Associated with:** Innovation, Science, and Economic Development (ISED)
 
         **Description:**
+        Developed a SharePoint site for the Technical Support Officers (TSOs) and assisted in migrating existing content from an internal wiki. Focused on creating a clean, organized, and accessible knowledge base.
 
-        **Tech Stack:**
+        **Tech Stack:** Microsoft SharePoint
 
-    - ### Animal Farm Game
+    - ### Animal Farm Game {data-toc-label=""}
         ---
         **Associated with:** UBC Okanagan - COSC 121
 
         **Description:**
+        Created a Java-based simulation game as part of a guided project focused on object-oriented programming (OOP). Incorporated file input/output, exception handling, and class-based logic to simulate behaviors in an animal farm environment.
 
-        **Tech Stack:**
+        **Tech Stack:** Java
 
     </div>
     
 === "2022 & Earlier"
     <div class="grid cards" markdown>
 
-    - ### "Carnival" Project
+    - ### "Carnival" Project {data-toc-label=""}
         ---
         **Associated with:** Gateway to Technology
 
@@ -100,7 +113,7 @@
 
         **[GitHub Repository](https://github.com/LZBTH16/2022-carnival)**
 
-    - ### HTML/CSS Project
+    - ### HTML/CSS Project {data-toc-label=""}
         ---
         **Associated with:** Gateway to Technology
 

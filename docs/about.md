@@ -1,8 +1,3 @@
----
-hide:
-    - navigation
----
-
 # About Me
 
 Hi there! I'm **LZBTH16**, and here's a bit about who I am:
