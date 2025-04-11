@@ -19,3 +19,5 @@ I thrive on challenges that let me explore the intersection of creativity and lo
 - Networking
 - Game development with Unity
 - Embedded systems
+
+<!-- section about skills? education? work experience? -->

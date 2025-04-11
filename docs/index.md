@@ -21,7 +21,7 @@ Hi, I'm **LZBTH16**, a third year Computer Science student passionate about cybe
     Check out what I've built and learned!
 </div>
 
-## Tech Stack
+## Technologies
 
 <div class="grid cards" markdown>
 - Programming Languages
