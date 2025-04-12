@@ -1,8 +1,8 @@
-# Elizabeth's Portfolio
+# Personal Portfolio
 
 Welcome to my personal portfolio website! This site was built using [MkDocs](https://www.mkdocs.org/) with the [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) theme to showcase my projects, skills, and experiences.
 
-**Live Site**: [https://lzbth16.github.io/lzbth16_portfolio/](https://lzbth16.github.io/lzbth16_portfolio/)
+**Live Site**: [https://lzbth16.github.io/portfolio/](https://lzbth16.github.io/portfolio/)
 
 Hosted with **GitHub Pages**
 
