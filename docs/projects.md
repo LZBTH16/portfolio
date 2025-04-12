@@ -10,7 +10,7 @@
 
     Developed a dynamic, database-integrated web application using Node.js, Express.js, and SQL. Key features included product listings, filtered search, order history, and administrative tools. Sim-ester placed 1st overall among over 100 projects in the course, demonstrating both technical proficiency and strong design.
 
-    [Learn more](https://github.com/LZBTH16/sim-ester)
+    [GitHub Repository](https://github.com/LZBTH16/sim-ester)
 
 </div>
 
@@ -24,7 +24,7 @@
 
     While working on Collabium, I contributed to backend development (login system, task filtering) and frontend features (admin user management). I also played a key role in organizing the team’s workflow—maintaining documentation, keeping out Kanban board up to date with relevant tasks, coordinating meetings, and helping the team stay on schedule in an unofficial scrum master capacity.
 
-    [Learn more](https://github.com/KianShirvani/Collabium---Task-Management-Platform)
+    [GitHub Repository](https://github.com/KianShirvani/Collabium---Task-Management-Platform)
 
 </div>
 
@@ -36,7 +36,7 @@
     
     Built collaboratively with a team of three for our COSC 416 final project, AmazeBike is a Unity-based 3D platformer inspired by Excitebike. Players race through two tracks of increasing difficulty, dodging mud pits and hitting speed boosts to finish with the best time possible. The game includes a tutorial, visual and audio effects, and a top-three leaderboard system to encourage replayability. Power-ups like immunity help players overcome obstacles, while fireworks and music add to the immersive experience.
 
-    [Learn more](https://github.com/Zubdragon047/cosc416project)
+    [GitHub Repository](https://github.com/Zubdragon047/cosc416project)
     
 </div>
 
