@@ -18,7 +18,7 @@ theme:
 nav:
   - Home: index.md
   - About: about.md
-  - Projects: projects.md
+  - Projects & Coursework: projects.md
 
 markdown_extensions:
   - admonition
@@ -32,6 +32,3 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-
-extra_css:
-  - stylesheets/extra.css

@@ -1,4 +1,4 @@
-# Projects
+# Projects & Coursework
 
 ## Featured Projects
 
@@ -40,7 +40,91 @@
     
 </div>
 
-## Other Projects
+## Other Projects & Coursework
+
+Ordered by date (newest to oldest)
+
+=== "2025"
+    <div class="grid cards" markdown>
+
+    - ### Packet Crafting with Scapy {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 328
+
+        **Description:**
+        Implemented a custom Ping and Traceroute tool in Python using the Scapy packet crafting library. This project demonstrates low-level network programming by manually constructing and parsing ICMP packets. It highlights direct interaction with network protocols to analyze reachability and path discovery.
+
+    - ### Studio 5 - Polish and Build {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 416
+
+        **Description:**
+        Collaborated in a team to enhance a Unity Breakout prototype by adding unique features like particle effects and sound ("game juice"). Focused on version control, team coordination with Git, and releasing the final game build on itch.io.
+
+        **Tech Stack:** Unity, C#
+
+        **[GitHub Repository](https://github.com/LZBTH16/Studio5_PolishAndBuild)**
+
+    - ### Studio 4 - UI with Unity {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 416
+
+        **Description:**
+        Implemented a game UI in Unity, including a coin counter, in-world controls canvas, and a settings menu with gameplay effects. This project layered UI systems on top of an existing third-person platformer for a complete game feel.
+
+        **Tech Stack:** Unity, C#
+
+        **[GitHub Repository](https://github.com/LZBTH16/UIwithUnity)**
+
+    - ### TCP Chat Client {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 328
+
+        **Description:**
+        Built a Java-based instant messaging client supporting both TCP and UDP communication with a central server and peer clients. The project involved implementing a defined communication protocol and managing multiple network sockets & threads. It emphasizes hands-on experience with transport-layer programming and direct client-to-client messaging.
+
+
+    - ### Studio 3 - Third Person Platformer {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 416
+
+        **Description:**
+        Built a third-person character controller from scratch without a guided tutorial, applying prior Unity knowledge. The project emphasized player movement, camera control, and core platforming mechanics in a 3D space.
+
+        **Tech Stack:** Unity, C#
+
+        **[GitHub Repository](https://github.com/LZBTH16/ThirdPersonPlatformer)**
+
+    - ### Studio 2 - Bowling with Physics {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 416
+
+        **Description:**
+        Developed a simple bowling game in Unity with realistic physics, score tracking, and reset functionality. This project introduced game management, basic UI elements, and deepened understanding of Unity’s physics engine.
+
+        **Tech Stack:** Unity, C#
+
+        **[GitHub Repository](https://github.com/LZBTH16/BowlingWithPhysics)**
+
+    - ### Web Server {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 328
+
+        **Description:**
+        Developed a basic HTTP web server in Python 3 to handle and respond to raw HTTP requests. Used tools like Telnet, Wireshark, and web browsers to test and inspect traffic. This assignment focused on Layer 5 protocol handling and understanding how web servers process client requests.
+
+    - ### Studio 1 - Roll A Ball {data-toc-label=""}
+        ---
+        **Associated with:** UBC Okanagan - COSC 416
+
+        **Description:**
+        Created a physics-based Unity game where the player controls a ball to collect items in a 3D environment. Focused on learning Unity's interface, scripting basics, and version control. Includes a custom gameplay enhancement as a bonus feature.
+
+        **Tech Stack:** Unity, C#
+
+        **[GitHub Repository](https://github.com/LZBTH16/RollABall)**
+    
+    </div>
 
 === "2024"
     <div class="grid cards" markdown>
@@ -60,8 +144,6 @@
 
         **Description:**
         Created a Minecraft mod that adds a custom duck item and in-game object. Learned how to structure Minecraft assets and implement them into the actual game environment. Gained hands-on experience with game modding beyond test modes.
-
-        **Tech Stack:** Java, Kotlin, Gradle
     
     - ### Internet 101 {data-toc-label=""}
         ---
@@ -86,16 +168,12 @@
         **Description:**
         Developed a SharePoint site for the Technical Support Officers (TSOs) and assisted in migrating existing content from an internal wiki. Focused on creating a clean, organized, and accessible knowledge base.
 
-        **Tech Stack:** Microsoft SharePoint
-
     - ### Animal Farm Game {data-toc-label=""}
         ---
         **Associated with:** UBC Okanagan - COSC 121
 
         **Description:**
         Created a Java-based simulation game as part of a guided project focused on object-oriented programming (OOP). Incorporated file input/output, exception handling, and class-based logic to simulate behaviors in an animal farm environment.
-
-        **Tech Stack:** Java
 
     </div>
     
@@ -108,8 +186,6 @@
 
         **Description:**
         Developed a Python program featuring three mini-games—Mad Libs, Rock, Paper, Scissors, and a simple drawing game—all within a single file. The project highlighted logical thinking through the use of conditionals and user input to control game flow.
-
-        **Tech Stack:** Python
 
         **[GitHub Repository](https://github.com/LZBTH16/2022-carnival)**
 
@@ -129,5 +205,3 @@
         </figure>
 
     </div>
-
-        
