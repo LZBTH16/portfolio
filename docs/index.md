@@ -5,7 +5,7 @@ hide:
 
 # Welcome to My Portfolio
 
-Hi, I'm **LZBTH16**, a third year Computer Science student passionate about cybersecurity, game development, and software & web development. I enjoy bringing creative ideas to life through code, with a focus on both functionality and user experience.
+Hi, I'm **Elizabeth**, a third year Computer Science student passionate about cybersecurity, game development, and software & web development. I enjoy bringing creative ideas to life through code, with a focus on both functionality and user experience.
 
 ## Explore
 

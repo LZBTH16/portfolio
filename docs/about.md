@@ -1,6 +1,6 @@
 # About Me
 
-Hi there! I'm **LZBTH16**, and here's a bit about who I am:
+Hi there! I'm **Elizabeth**, and here's a bit about who I am:
 
 ## :material-target: Quick Facts
 
