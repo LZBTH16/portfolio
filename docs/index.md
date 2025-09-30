@@ -36,7 +36,7 @@ Hi, I'm **Elizabeth**, a third year Computer Science student passionate about cy
 
     :simple-html5: HTML
 
-    :simple-css3: CSS
+    :simple-css: CSS
 
     C#
 
