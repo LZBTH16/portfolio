@@ -201,7 +201,7 @@ Ordered by date (newest to oldest)
         **[GitHub Repository](https://github.com/LZBTH16/2022-phish-website)**
 
         <figure markdown="span">
-        ![ORL Mock Site Top](../images/Phish%20Website%20(top).PNG){ width="500" }
+        ![ORL Mock Site Top](../images/Phish Website (top).PNG){ width="500" }
         </figure>
 
     </div>

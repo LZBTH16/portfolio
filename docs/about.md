@@ -20,4 +20,43 @@ I thrive on challenges that let me explore the intersection of creativity and lo
 - Game development with Unity
 - Embedded systems
 
-<!-- section about skills? education? work experience? -->
+## Awards, Certificates, & Skills
+
+=== "Awards & Certificates"
+
+    2024:
+
+    - Received the Database Web Development Badge, COSC 304
+    - Introduction to Cybersecurity, Cisco Networking Academy
+    - Dean's List, UBCO
+    - Received the Deputy Vice Chancellor Award, UBCO
+
+    2023:
+
+    - Amateur Radio Operator Certificate, Basic with Honours
+    - Received the Deputy Vice Chancellor Award, UBCO
+
+    2022:
+
+    - Received the BC Achievement Scholarship Award
+    - Gateway to Technology Certificate
+    - Received the District Project Scholarship Award
+    - Received the Diplôme D’Études en Langue Française (DELF) at the B1 level
+
+=== "Skills"
+
+    - Problem solving
+    - Organization
+    - Critical thinking
+    - Troubleshooting
+    - Teamwork
+    - Punctual
+    - Time management
+    - DSA
+    - Database design
+    - OOP
+    - DevOps
+
+
+
+<!-- section about education? work experience? -->
