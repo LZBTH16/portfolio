@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="project-detail-page project-detail-layout">
+    <div class="project-detail-content">
+    <section class="project-detail-hero" id="project-summary">
+      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <h1>AmazeBike | Unity WebGL Game</h1>
+      <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 416</p>
+      <p class="project-detail-stack-label">Tech Stack</p>
+      <div class="project-detail-stack-list">
+        <span>Unity</span>
+        <span>C#</span>
+        <span>WebGL</span>
+        <span>Itch.io</span>
+      </div>
+      <p>
+        AmazeBike is a Unity-based 3D platformer inspired by Excitebike. It was developed with a team of three for the COSC 416 final project and deployed 
+        as a playable Itch.io experience. The project centered on building a complete 3D platformer with movement, level design, and polish.
+      </p>
+      <p>
+        Players race through two tracks of increasing difficulty, dodging mud pits and hitting speed boosts to finish with the best time possible. The game 
+        includes a tutorial, visual and audio effects, and a top-three leaderboard system to encourage replayability. Power-ups like immunity help players 
+        overcome obstacles, while fireworks and music add to the immersive experience.
+      </p>
+      <div class="project-detail-links">
+        <a class="project-detail-link" href="https://github.com/Zubdragon047/cosc416project" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <div class="project-detail-grid">
+      <article class="card project-detail-card" id="project-features">
+        <h2>Features</h2>
+        <ul class="project-detail-list">
+          <li>Main Menu & Tutorial: Learn the game controls before jumping into the action!</li>
+          <li>Two levels: Easy and Hard Difficulty tracks.</li>
+          <li>Obstacles & Power-ups:
+            Mud pits that slow you down -- unless you have immunity
+            Speed boosts that help you gain momentum.</li>
+          <li>Leaderboard System: Compete for the best time and see if you rank in the top three!</li>
+          <li>Visual & Audio Effects: Particles & sound for speed boosts, mud pits, immunity, and particles for fireworks, alongside level music</li>
+        </ul>
+      </article>
+
+      <article class="card project-detail-card" id="project-role">
+        <h2>My Role</h2>
+        <p>
+          I contributed to making the track obstacles & functionality, Level UI, Score saving, the hard level, and background decorations.
+        </p>
+      </article>
+    </div>
+
+    <article class="card project-detail-card project-detail-screenshots-card" id="project-screenshots">
+      <h2>Screenshots</h2>
+      <div class="project-detail-screenshots">
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Gameplay scene</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Browser WebGL view</figcaption>
+        </figure>
+      </div>
+    </article>
+    </div>
+
+    <aside class="project-detail-toc" aria-label="On this page">
+      <h2 class="project-detail-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#project-summary">Summary</a></li>
+          <li><a href="#project-features">Features</a></li>
+          <li><a href="#project-role">My Role</a></li>
+          <li><a href="#project-screenshots">Screenshots</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</BaseLayout>

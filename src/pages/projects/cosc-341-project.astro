@@ -1,0 +1,75 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="project-detail-page project-detail-layout">
+    <div class="project-detail-content">
+    <section class="project-detail-hero" id="project-summary">
+      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <h1>COSC 341 Project | Lost &amp; Found App</h1>
+      <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 341</p>
+      <p class="project-detail-stack-label">Tech Stack</p>
+      <div class="project-detail-stack-list">
+        <span>Java</span>
+        <span>Firebase</span>
+        <span>Android Studio</span>
+      </div>
+      <p>
+        The UBCO Lost &amp; Found app is a centralized mobile application designed to help students, staff, and visitors efficiently report, search for, and recover lost items 
+        on campus. This project addresses the lack of a unified lost-and-found process on campus by providing a single platform for reporting and managing found items.
+      </p>
+      <div class="project-detail-links">
+        <a class="project-detail-link" href="https://github.com/LZBTH16/COSC341Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <div class="project-detail-grid">
+      <article class="card project-detail-card" id="project-features">
+        <h2>Features</h2>
+        <ul class="project-detail-list">
+          <li>Item Management: Users can create and manage lost or found item listings by entering details such as item title, description, date, and location.</li>
+          <li>Browse, Search, and Filter Items: Users can browse all item listings and apply filters such as location, date, and category to efficiently locate items.</li>
+          <li>Item Claim Form: Users who believe an item belongs to them can submit a claim by providing identifying details of the item.</li>
+          <li>Users who posted a found item can review incoming claims and approve or deny them based on the information provided.</li>
+        </ul>
+      </article>
+
+      <article class="card project-detail-card" id="project-role">
+        <h2>My Role</h2>
+        <p>
+          I acted as a project lead while contributing to both design and development. I defined core features, introduced Figma for UI planning, and completed several 
+          designs to keep the project on schedule. I coordinated team progress through regular check-ins and task management. On the technical side, I built the home 
+          screen and item add/view features in Android Studio and set up a Firebase Realtime Database for the app.
+        </p>
+      </article>
+    </div>
+
+    <article class="card project-detail-card project-detail-screenshots-card" id="project-screenshots">
+      <h2>Screenshots</h2>
+      <div class="project-detail-screenshots">
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Item reporting screen</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Search / item listing screen</figcaption>
+        </figure>
+      </div>
+    </article>
+    </div>
+
+    <aside class="project-detail-toc" aria-label="On this page">
+      <h2 class="project-detail-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#project-summary">Summary</a></li>
+          <li><a href="#project-features">Features</a></li>
+          <li><a href="#project-role">My Role</a></li>
+          <li><a href="#project-screenshots">Screenshots</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</BaseLayout>

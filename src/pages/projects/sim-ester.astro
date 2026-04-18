@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="project-detail-page project-detail-layout">
+    <div class="project-detail-content">
+    <section class="project-detail-hero" id="project-summary">
+      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <h1>Sim-ester | E-Commerce Website</h1>
+      <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 304</p>
+      <p class="project-detail-stack-label">Tech Stack</p>
+      <div class="project-detail-stack-list">
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>PostgreSQL</span>
+        <span>Neon</span>
+        <span>Render</span>
+        <span>Docker</span>
+        <span>SendGrid</span>
+      </div>
+      <p>
+        Sim-ester is an online store built for the COSC 304 project. It is a dynamic, database integrated web application that use Node.js, Express.js, and SQL.
+        Key features included product listings, filtered search, order history, and administrative tools. It showcases simulation-style games based on courses 
+        at UBC Okanagan and includes a full shopping flow from browsing to checkout.
+        </p>
+        <p>
+            We designed and implemented the database schema, used prepared statements for secure SQL queries, and built a clean, intuitive UI for seamless user 
+            interaction. The project was developed using Node.js, HTML/CSS, and Microsoft SQL Server.
+        </p>
+      <p>
+        Sim-ester placed 1st overall among over 100 projects in the course, demonstrating both technical proficiency and strong design.
+      </p>
+      <div class="project-detail-links">
+        <a class="project-detail-link" href="https://github.com/LZBTH16/sim-ester" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <div class="project-detail-grid">
+      <article class="card project-detail-card" id="project-features">
+        <h2>Features</h2>
+        <ul class="project-detail-list">
+          <li>Product listings: Display products with images, descriptions, and pricing.</li>
+          <li>Ratings and reviews: Allow customers to rate and review purchased products.</li>
+          <li>Search and filter: Find products by name and filter results by category.</li>
+          <li>Order history: View past orders with details such as products, purchase date, and order total.</li>
+        </ul>
+      </article>
+
+      <article class="card project-detail-card" id="project-role">
+        <h2>My Role</h2>
+        <p>
+          I focused on front-end design and key application features. I designed and implemented the site’s UI across all pages, ensuring a consistent and 
+          user-friendly experience. I also built core functionality for product listings, customer management, and admin tools (add/update/delete products),
+           and contributed to server-side logic and ongoing code improvements.
+        </p>
+      </article>
+    </div>
+
+    <article class="card project-detail-card project-detail-screenshots-card" id="project-screenshots">
+      <h2>Screenshots</h2>
+      <div class="project-detail-screenshots">
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Homepage / storefront</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Cart or checkout flow</figcaption>
+        </figure>
+      </div>
+    </article>
+    </div>
+
+    <aside class="project-detail-toc" aria-label="On this page">
+      <h2 class="project-detail-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#project-summary">Summary</a></li>
+          <li><a href="#project-features">Features</a></li>
+          <li><a href="#project-role">My Role</a></li>
+          <li><a href="#project-screenshots">Screenshots</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</BaseLayout>

@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <div class="project-detail-page project-detail-layout">
+    <div class="project-detail-content">
+    <section class="project-detail-hero" id="project-summary">
+      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <h1>Collabium | Task Management App</h1>
+      <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 310</p>
+      <p class="project-detail-stack-label">Tech Stack</p>
+      <div class="project-detail-stack-list">
+        <span>React</span>
+        <span>Node.js</span>
+        <span>Express</span>
+        <span>PostgreSQL</span>
+      </div>
+      <p>
+        Collabium is a full-stack web application designed to help teams manage tasks efficiently with features like secure user authentication, role-based access, task 
+        filtering, and an admin dashboard. Built with React, Node.js, Express, and PostgreSQL, the system supports CI/CD, task notifications, and detailed team performance tracking.
+      </p>
+      <div class="project-detail-links">
+        <a class="project-detail-link" href="https://github.com/KianShirvani/Collabium---Task-Management-Platform" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </div>
+    </section>
+
+    <div class="project-detail-grid">
+      <article class="card project-detail-card" id="project-features">
+        <h2>Features</h2>
+        <ul class="project-detail-list">
+          <li>User Management: Register, authenticate, and manage user roles</li>
+          <li>Task Management: Create, read, update, and delete tasks with advanced features (e.g., locking tasks, assigning multiple users)</li>
+          <li>Kanban Board: Track issues through stages (Backlog, Sprint Backlog, In Progress, In Review, Done)</li>
+          <li>Admin Tools: Specialized routes and controls for administrators</li>
+          <li>CI/CD Integration: Automated testing and deployment with Docker</li>
+        </ul>
+      </article>
+
+      <article class="card project-detail-card" id="project-role">
+        <h2>My Role</h2>
+        <p>
+          While working on Collabium, I contributed to backend development (login system, task filtering) and frontend features (admin user management). I also played a key role in 
+          organizing the team’s workflow—maintaining documentation, keeping out Kanban board up to date with relevant tasks, coordinating meetings, and helping the team stay on 
+          schedule in an unofficial scrum master capacity.
+        </p>
+      </article>
+    </div>
+
+    <article class="card project-detail-card project-detail-screenshots-card" id="project-screenshots">
+      <h2>Screenshots</h2>
+      <div class="project-detail-screenshots">
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Task dashboard</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
+          <figcaption>Authentication or admin view</figcaption>
+        </figure>
+      </div>
+    </article>
+    </div>
+
+    <aside class="project-detail-toc" aria-label="On this page">
+      <h2 class="project-detail-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#project-summary">Summary</a></li>
+          <li><a href="#project-features">Features</a></li>
+          <li><a href="#project-role">My Role</a></li>
+          <li><a href="#project-screenshots">Screenshots</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</BaseLayout>
