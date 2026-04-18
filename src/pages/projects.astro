@@ -3,20 +3,389 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <h1>Projects</h1>
+  <div class="projects-page projects-layout">
+    <div class="projects-content">
+      <h1 id="projects-top">Projects</h1>
 
-  <section>
-    <h2>Featured Projects</h2>
-    <div>
-      <p>Project 1</p>
-      <p>Project 2</p>
-    </div>
-  </section>
+      <section class="projects-section" id="featured-projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-featured-grid">
+        <article class="card project-card">
+          <h3><a class="project-title-link" href="/projects/sim-ester">Sim-ester | E-Commerce Website</a></h3>
+          <p class="project-associated">Associated with: COSC 304 project</p>
+          <p class="project-stack-label">Tech Stack</p>
+          <div class="project-stack-list">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+          </div>
+          <p class="project-description">
+            Sim-ester is a website that was developed for the COSC304 project. It is an online store that sells products depicting simulation-style games based on courses at UBC Okanagan.
+          </p>
+          <div class="project-links">
+            <a class="project-link" href="">View details</a>
+            <a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
 
-  <section>
-    <h2>Other Projects & Coursework</h2>
-    <div>
-      <p>Course project 1</p>
+        <article class="card project-card">
+          <h3><a class="project-title-link" href="/projects/collabium">Collabium | Task Management App</a></h3>
+          <p class="project-associated">Associated with: Full-stack team project</p>
+          <p class="project-stack-label">Tech Stack</p>
+          <div class="project-stack-list">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+          <p class="project-description">
+            Collabium is a full-stack web application designed to help teams manage tasks efficiently with features like secure user authentication, role-based access, task filtering, and an admin dashboard.
+          </p>
+          <div class="project-links">
+            <a class="project-link" href="">View details</a>
+            <a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <h3><a class="project-title-link" href="/projects/amazebike">AmazeBike | Unity WebGL Game</a></h3>
+          <p class="project-associated">Associated with: COSC 416 final project</p>
+          <p class="project-stack-label">Tech Stack</p>
+          <div class="project-stack-list">
+            <span>Unity</span>
+            <span>C#</span>
+            <span>WebGL</span>
+          </div>
+          <p class="project-description">
+            Built collaboratively with a team of three for our COSC 416 final project, AmazeBike is a Unity-based 3D platformer inspired by Excitebike.
+          </p>
+          <div class="project-links">
+            <a class="project-link" href="">View details</a>
+            <a class="project-link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="projects-section" id="other-projects">
+        <h2>Other Projects & Coursework</h2>
+        <div class="year-tabs" role="tablist" aria-label="Project years">
+          <button class="year-tab active" type="button" role="tab" aria-selected="true" aria-controls="projects-year-2026" data-year-target="2026">2026</button>
+          <button class="year-tab" type="button" role="tab" aria-selected="false" aria-controls="projects-year-2025" data-year-target="2025">2025</button>
+          <button class="year-tab" type="button" role="tab" aria-selected="false" aria-controls="projects-year-2024" data-year-target="2024">2024</button>
+          <button class="year-tab" type="button" role="tab" aria-selected="false" aria-controls="projects-year-earlier" data-year-target="earlier">2023 &amp; Earlier</button>
+        </div>
+
+      <div class="year-panels">
+        <div class="year-panel active" id="projects-year-2026" role="tabpanel" data-year-panel="2026" hidden>
+          <div class="projects-year-grid">
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2026</p>
+              <h3>COSC 341 Project</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 341</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Java</span>
+                <span>Firebase</span>
+                <span>Android Studio</span>
+              </div>
+              <p class="project-description">The UBCO Lost & Found app is a centralized mobile application designed to help 
+                students, staff, and visitors efficiently report, search for, and recover lost items on campus. The system 
+                addresses the current lack of a unified lost and found process by providing a single platform for managing 
+                lost and found items.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/COSC341Project" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="year-panel active" id="projects-year-2025" role="tabpanel" data-year-panel="2025" hidden>
+          <div class="projects-year-grid">
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Packet Crafting with Scapy</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 328</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Python</span>
+                <span>Scapy</span>
+              </div>
+              <p class="project-description">Implemented a custom Ping and Traceroute tool in Python using the Scapy packet crafting library. 
+                This project demonstrates low-level network programming by manually constructing and parsing ICMP packets. It highlights direct 
+                interaction with network protocols to analyze reachability and path discovery.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Studio 4 - UI with Unity</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <p class="project-description">Collaborated in a team to enhance a Unity Breakout prototype by adding unique features like 
+                particle effects and sound ("game juice"). Focused on version control, team coordination with Git, and releasing the final 
+                game build on itch.io.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/Studio5_PolishAndBuild" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Studio 4 - UI with Unity</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <p class="project-description">Implemented a game UI in Unity, including a coin counter, in-world controls canvas, and a settings menu 
+                with gameplay effects. This project layered UI systems on top of an existing third-person platformer for a complete game feel.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/UIwithUnity" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>TCP Chat Client</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 328</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Java</span>
+              </div>
+              <p class="project-description">Built a Java-based instant messaging client supporting both TCP and UDP communication with a 
+                central server and peer clients. The project involved implementing a defined communication protocol and managing multiple 
+                network sockets & threads. It emphasizes hands-on experience with transport-layer programming and direct client-to-client messaging.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Studio 3 - Third Person Platformer</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <p class="project-description">Built a third-person character controller from scratch without a guided tutorial, applying prior 
+                Unity knowledge. The project emphasized player movement, camera control, and core platforming mechanics in a 3D space.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/ThirdPersonPlatformer" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Studio 2 - Bowling with Physics</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <p class="project-description">Developed a simple bowling game in Unity with realistic physics, score tracking, and reset functionality. 
+                This project introduced game management, basic UI elements, and deepened understanding of Unity’s physics engine.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/BowlingWithPhysics" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Web Server</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 328</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Python</span>
+              </div>
+              <p class="project-description">Developed a basic HTTP web server in Python 3 to handle and respond to raw HTTP requests. 
+                Used tools like Telnet, Wireshark, and web browsers to test and inspect traffic. This assignment focused on Layer 5 
+                protocol handling and understanding how web servers process client requests.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2025</p>
+              <h3>Studio 1 - Roll a Ball</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Unity</span>
+                <span>C#</span>
+              </div>
+              <p class="project-description">Created a physics-based Unity game where the player controls a ball to collect 
+                items in a 3D environment. Focused on learning Unity's interface, scripting basics, and version control. 
+                Includes a custom gameplay enhancement as a bonus feature.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/RollABall" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="year-panel active" id="projects-year-2024" role="tabpanel" data-year-panel="2024">
+          <div class="projects-year-grid">
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2024</p>
+              <h3>Kanban Website</h3>
+              <p class="project-associated">Associated with: Personal Project</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+              <p class="project-description">Built a responsive Kanban board for task management using HTML, CSS, and JavaScript. Features include 
+                draggable task cards and persistent local storage. Designed and implemented a custom API for task creation and data handling.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2024</p>
+              <h3>Duckies Mod for Minecraft</h3>
+              <p class="project-associated">Associated with: Personal Project</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Java</span>
+              </div>
+              <p class="project-description">Created a Minecraft mod that adds a custom duck item and in-game object. 
+                Learned how to structure Minecraft assets and implement them into the actual game environment. Gained 
+                hands-on experience with game modding beyond test modes.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/MC-Mod-duckies-1.19.2" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2024</p>
+              <h3>Internet 101</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 101</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>React</span>
+                <span>Node.js</span>
+              </div>
+              <p class="project-description">Led a team in developing a beginner-friendly website to teach essential 
+                internet skills and safety. As project lead, managed task delegation, set milestones, and coordinated 
+                team efforts from concept to deployment.</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- 2023 & earlier -->
+        <div class="year-panel" id="projects-year-earlier" role="tabpanel" data-year-panel="earlier" hidden>
+          <div class="projects-year-grid">
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2023</p>
+              <h3>Wiki to Sharepoint Migration</h3>
+              <p class="project-associated">Associated with: Innovation, Science, and Economic Development (ISED)</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Microsoft SharePoint</span>
+              </div>
+              <p class="project-description">Developed a SharePoint site for the Technical Support Officers (TSOs) and 
+                assisted in migrating existing content from an internal wiki. Focused on creating a clean, organized, 
+                and accessible knowledge base.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2023</p>
+              <h3>Animal Farm Game</h3>
+              <p class="project-associated">Associated with: UBC Okanagan - COSC 121</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Java</span>
+              </div>
+              <p class="project-description">Created a Java-based simulation game as part of a guided project focused on 
+                object-oriented programming (OOP). Incorporated file input/output, exception handling, and class-based 
+                logic to simulate behaviors in an animal farm environment.</p>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2022</p>
+              <h3>Carnival Project</h3>
+              <p class="project-associated">Associated with: Gateway to Technology</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>Python</span>
+              </div>
+              <p class="project-description">Developed a Python program featuring three mini-games—Mad Libs, Rock, Paper, 
+                Scissors, and a simple drawing game—all within a single file. The project highlighted logical thinking 
+                through the use of conditionals and user input to control game flow.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/2022-carnival" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+            <article class="card project-card project-card-secondary">
+              <p class="project-year">2022</p>
+              <h3>HTML/CSS Project</h3>
+              <p class="project-associated">Associated with: Gateway to Technology</p>
+              <p class="project-stack-label">Tech Stack</p>
+              <div class="project-stack-list">
+                <span>HTML</span>
+                <span>CSS</span>
+              </div>
+              <p class="project-description">Created a fake phishing website that mimicked a real one to demonstrate HTML 
+                and CSS skills, showcasing both technical proficiency and an understanding of how phishing works.</p>
+              <div class="project-links">
+                <a class="project-link" href="https://github.com/LZBTH16/2022-phish-website" target="_blank" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        </div>
+      </section>
     </div>
-  </section>
+
+    <aside class="projects-toc" aria-label="On this page">
+      <h2 class="projects-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#featured-projects">Featured Projects</a></li>
+          <li><a href="#other-projects">Other Projects &amp; Coursework</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
 </BaseLayout>
+
+<script is:inline>
+  const yearTabs = document.querySelectorAll(".year-tab");
+  const yearPanels = document.querySelectorAll("[data-year-panel]");
+
+  const activateYear = (year) => {
+    yearTabs.forEach((tab) => {
+      const isActive = tab.dataset.yearTarget === year;
+      tab.classList.toggle("active", isActive);
+      tab.setAttribute("aria-selected", String(isActive));
+    });
+
+    yearPanels.forEach((panel) => {
+      const isActive = panel.dataset.yearPanel === year;
+      panel.hidden = !isActive;
+      panel.classList.toggle("active", isActive);
+    });
+  };
+
+  yearTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const year = tab.dataset.yearTarget;
+      if (year) activateYear(year);
+    });
+  });
+
+  activateYear("2026");
+</script>
