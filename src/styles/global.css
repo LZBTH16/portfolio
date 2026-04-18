@@ -1,0 +1,54 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: #111;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* HERO */
+.hero {
+  padding: 60px 0;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-links a {
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+  margin-bottom: 60px;
+}
+
+/* PROJECT GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARDS */
+.card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #aaa;
+}
