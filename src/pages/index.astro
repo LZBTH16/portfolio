@@ -9,8 +9,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 		<p>Exploring Cybersecurity & Network Systems | Collaboration Driven | Innovating Through Code</p>
 
 		<div class="hero-links">
-		<a href="/projects">View Projects</a>
-		<a href="/about">About Me</a>
+		<a class="card hero-link-card" href="/projects">
+			<span class="hero-link-title">View Projects</span>
+			<span class="hero-link-divider" aria-hidden="true"></span>
+			<span class="hero-link-description">Explore featured builds and collaborative work.</span>
+		</a>
+		<a class="card hero-link-card" href="/about">
+			<span class="hero-link-title">About Me</span>
+			<span class="hero-link-divider" aria-hidden="true"></span>
+			<span class="hero-link-description">Read more about my background and interests.</span>
+		</a>
 		</div>
 	</section>
 
@@ -27,7 +35,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<section>
 		<h2>Featured Projects</h2>
 
-		<div class="grid">
+		<div class="grid featured-grid">
 			<div class="card">
 				<h3>Sim-ester | E-Commerce Website</h3>
 				<p>Sim-ester is a website that was developed for the COSC304 project. It is an online store that sells products depicting simulation-style games based on courses at UBC Okanagan.</p>
@@ -48,14 +56,70 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<!-- TECH STACK -->
 	<section>
 		<h2>Tech Stack</h2>
-		<p>React • Node.js • Express • JavaScript • HTML • CSS</p>
+		<div class="grid tech-stack-grid">
+			<div class="card tech-card">
+				<h3>Programming Languages</h3>
+				<ul class="tech-list">
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="" loading="lazy" decoding="async" />Java</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy" decoding="async" />Python</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="" loading="lazy" decoding="async" />JavaScript</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="" loading="lazy" decoding="async" />HTML</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="" loading="lazy" decoding="async" />CSS</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="" loading="lazy" decoding="async" />C#</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="" loading="lazy" decoding="async" />C</li>
+					<li><img class="tech-logo" src="https://cdn.simpleicons.org/postgresql" alt="" loading="lazy" decoding="async" />SQL</li>
+				</ul>
+			</div>
+
+			<div class="card tech-card">
+				<h3>Tools/Frameworks</h3>
+				<ul class="tech-list">
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" alt="" loading="lazy" decoding="async" />Unity</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy" decoding="async" />React</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" decoding="async" />Node.js</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" decoding="async" />PostgreSQL</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="" loading="lazy" decoding="async" />MySQL</li>
+					<li><img class="tech-logo" src="https://cdn.simpleicons.org/express" alt="" loading="lazy" decoding="async" />Express.js</li>
+				</ul>
+			</div>
+
+			<div class="card tech-card">
+				<h3>Other</h3>
+				<ul class="tech-list">
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="" loading="lazy" decoding="async" />Git</li>
+					<li><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy" decoding="async" />Docker</li>
+					<li><img class="tech-logo" src="https://cdn.simpleicons.org/render" alt="" loading="lazy" decoding="async" />Render</li>
+					<li>ServiceNow</li>
+				</ul>
+			</div>
+		</div>
 	</section>
 
 	<!-- CONNECT -->
-	<section>
+	<section class="connect-section">
 		<h2>Let’s Connect</h2>
-		<p>
-		GitHub | LinkedIn
-		</p>
+		<div class="connect-grid">
+			<a
+				class="card connect-card"
+				href="https://github.com/LZBTH16"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Visit GitHub profile"
+			>
+				<img class="social-logo" src="https://cdn.simpleicons.org/github/ffffff" alt="" loading="lazy" decoding="async" />
+				<span>GitHub</span>
+			</a>
+
+			<a
+				class="card connect-card"
+				href="https://www.linkedin.com/in/elizabeth-yakovlev16/"
+				target="_blank"
+				rel="noopener noreferrer"
+				aria-label="Visit LinkedIn profile"
+			>
+				<img class="social-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="" loading="lazy" decoding="async" />
+				<span>LinkedIn</span>
+			</a>
+		</div>
 	</section>
 </BaseLayout>
