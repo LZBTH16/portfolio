@@ -27,6 +27,8 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       </p>
       <div class="project-detail-links">
         <a class="project-detail-link" href="https://github.com/Zubdragon047/cosc416project" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="project-detail-link" href="https://sol9342.itch.io/amazebike" target="_blank" rel="noopener noreferrer">Itch.io</a>
+        <a class="project-detail-link" href="https://www.youtube.com/watch?v=D3nS9_wLmM8" target="_blank" rel="noopener noreferrer">Video Demo</a>
       </div>
     </section>
 
@@ -56,13 +58,42 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2>Screenshots</h2>
       <div class="project-detail-screenshots">
         <figure class="project-screenshot-card">
-          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
-          <figcaption>Gameplay scene</figcaption>
+          <img class="project-screenshot-image" src="/images/projects/amazebike/main-menu.png" alt="AmazeBike main menu screen" loading="lazy" />
+          <figcaption>Main Menu</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <div class="project-screenshot-placeholder">Screenshot placeholder</div>
-          <figcaption>Browser WebGL view</figcaption>
+          <img class="project-screenshot-image" src="/images/projects/amazebike/controls.png" alt="AmazeBike controls screen" loading="lazy" />
+          <figcaption>Controls</figcaption>
         </figure>
+        <figure class="project-screenshot-card">
+          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-before-starting.png" alt="AmazeBike tutorial screen before starting" loading="lazy" />
+          <figcaption>Tutorial Before Starting</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-while-playing-1.png" alt="AmazeBike tutorial while playing screen one" loading="lazy" />
+          <figcaption>Tutorial While Playing 1</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-while-playing-2.png" alt="AmazeBike tutorial while playing screen two" loading="lazy" />
+          <figcaption>Tutorial While Playing 2</figcaption>
+        </figure>
+        <figure class="project-screenshot-card">
+          <img class="project-screenshot-image" src="/images/projects/amazebike/finish-screen.png" alt="AmazeBike finish screen" loading="lazy" />
+          <figcaption>Finish Screen</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <article class="card project-detail-card project-detail-screenshots-card" id="project-video-demo">
+      <h2>Video Demo</h2>
+      <div class="project-detail-video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/D3nS9_wLmM8"
+          title="AmazeBike Video Demo"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
       </div>
     </article>
     </div>
@@ -75,6 +106,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
           <li><a href="#project-features">Features</a></li>
           <li><a href="#project-role">My Role</a></li>
           <li><a href="#project-screenshots">Screenshots</a></li>
+          <li><a href="#project-video-demo">Video Demo</a></li>
         </ul>
       </nav>
     </aside>
