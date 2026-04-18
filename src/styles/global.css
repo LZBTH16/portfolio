@@ -158,6 +158,10 @@ p {
 }
 
 .featured-grid h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 
