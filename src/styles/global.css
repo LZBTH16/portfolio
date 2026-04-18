@@ -668,8 +668,8 @@ p {
 
 .project-detail-screenshots {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
 }
 
 .project-screenshot-card {
@@ -683,6 +683,14 @@ p {
   object-fit: cover;
   border: 1px solid var(--border);
   border-radius: 10px;
+  background: var(--bg-elev);
+}
+
+.project-screenshot-image.project-screenshot-phone {
+  aspect-ratio: auto;
+  width: 100%;
+  height: 320px;
+  object-fit: contain;
   background: var(--bg-elev);
 }
 
@@ -1019,6 +1027,10 @@ p {
   .project-detail-page.project-detail-layout {
     grid-template-columns: 1fr;
     gap: 18px;
+  }
+
+  .project-detail-screenshots {
+    grid-template-columns: 1fr;
   }
 
   .project-detail-content {
