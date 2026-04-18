@@ -1,5 +1,39 @@
-<nav class="site-nav" aria-label="Primary">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/projects">Projects</a>
-</nav>
+<header class="site-header" data-nav-state="full">
+  <nav class="site-nav" aria-label="Primary">
+    <a class="site-brand" href="/" aria-label="Go to home page">
+      <img class="site-brand-image" src="/portfolio-logo.png" alt="Profile" loading="lazy" decoding="async" />
+      <span class="site-title">Elizabeth's Portfolio</span>
+    </a>
+
+    <div class="site-nav-links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+    </div>
+  </nav>
+</header>
+
+<script is:inline>
+  const siteHeader = document.querySelector(".site-header");
+
+  if (siteHeader) {
+    let lastScrollY = window.scrollY;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= 8) {
+        siteHeader.dataset.navState = "full";
+      } else if (currentScrollY > lastScrollY + 2) {
+        siteHeader.dataset.navState = "compact";
+      } else if (currentScrollY < lastScrollY - 2) {
+        siteHeader.dataset.navState = "full";
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+</script>
