@@ -311,7 +311,183 @@ p {
   flex-shrink: 0;
 }
 
+/* ABOUT PAGE */
+.about-page.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 240px;
+  gap: 30px;
+  align-items: start;
+}
+
+.about-page .about-content {
+  min-width: 0;
+}
+
+.about-page .about-intro {
+  max-width: none;
+  margin-bottom: 28px;
+  color: var(--text-muted);
+}
+
+.about-page .about-section {
+  margin-bottom: 32px;
+  padding-bottom: 6px;
+  scroll-margin-top: 120px;
+}
+
+.about-page .about-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  padding-bottom: 0;
+}
+
+.about-page .section-icon {
+  font-size: 1.05em;
+  line-height: 1;
+}
+
+.about-page .about-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.about-page .about-section p,
+.about-page .about-section li,
+.about-page .skills-list li {
+  color: var(--text-muted);
+}
+
+.about-page .about-section li + li {
+  margin-top: 8px;
+}
+
+.about-page .timeline-list,
+.about-page .skills-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.about-page .skills-list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+  align-items: stretch;
+}
+
+.about-page .skills-list li {
+  margin-top: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-muted);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.about-page .skills-list li + li {
+  margin-top: 0;
+}
+
+.about-page .skills-list li:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background-color: var(--surface-hover);
+}
+
+.about-page .timeline-list > li {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 10px 0;
+}
+
+.about-page .timeline-list > li + li {
+  border-top: 1px solid var(--border);
+}
+
+.about-page .timeline-group {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.about-page .timeline-group li {
+  color: var(--text-muted);
+}
+
+.about-page .timeline-group li + li {
+  margin-top: 6px;
+}
+
+.about-page .timeline-date {
+  color: var(--accent-strong);
+  font-weight: 700;
+}
+
+.about-page .timeline-item {
+  color: var(--text-muted);
+}
+
+.about-page .about-toc {
+  position: sticky;
+  top: 110px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-elev);
+}
+
+.about-page .about-toc-title {
+  margin: 0 0 8px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-page .about-toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.about-page .about-toc li + li {
+  margin-top: 8px;
+}
+
+.about-page .about-toc a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.about-page .about-toc a:hover,
+.about-page .about-toc a:focus-visible {
+  color: var(--accent-strong);
+}
+
 @media (max-width: 900px) {
+  .about-page.about-layout {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-page .about-toc {
+    position: static;
+    top: auto;
+  }
+
   .site-nav {
     gap: 12px;
     padding: 14px 16px;

@@ -3,25 +3,96 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-  <h1>About Me</h1>
+  <div class="about-page about-layout">
+    <div class="about-content">
+      <h1 id="about-top">About Me</h1>
+      <p class="about-intro">
+        Hi there! I am a fourth-year Computer Science student who loves building things that blend creativity,
+        collaboration, and practical impact, from web apps to interactive systems.
+        I am motivated by solving meaningful problems, learning through collaboration, and building
+        projects that are both technically solid and genuinely useful to others.
+      </p>
 
-  <section>
-    <h2>Quick Facts</h2>
-    <p>placeholder</p>
-  </section>
+    <section class="about-section" id="quick-facts">
+      <h2><span class="section-icon" aria-hidden="true">🎯</span>Quick Facts</h2>
+      <ul>
+        <li>Fourth-year Computer Science student</li>
+        <li>Interested in cybersecurity, networking, and full-stack web development</li>
+        <li>Enjoy team-based projects and turning ideas into polished products</li>
+        <li>Game dev enthusiast</li>
+        <li>Love hobbies like Ukrainian dance, piano, cross-stitch & crochet</li>
+        <li>Practical, adaptable, and curious</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>What Drives Me</h2>
-    <p>placeholder</p>
-  </section>
+    <section class="about-section" id="currently-exploring">
+      <h2><span class="section-icon" aria-hidden="true">🔭</span>Currently Exploring</h2>
+      <ul>
+        <li>Network systems concepts</li>
+        <li>Game development with Unity</li>
+        <li>Human-computer interaction principles & design</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Currently Exploring</h2>
-    <p>placeholder</p>
-  </section>
+    <section class="about-section" id="awards-certificates">
+      <h2><span class="section-icon" aria-hidden="true">🏅</span>Awards & Certificates</h2>
+      <ul class="timeline-list">
+        <li>
+          <span class="timeline-date">2024</span>
+          <ul class="timeline-group">
+            <li>Received the Database Web Development Badge, COSC 304 - UBCO</li>
+            <li>Introduction to Cybersecurity, Cisco Networking Academy</li>
+            <li>Dean's List, UBCO</li>
+            <li>Received the Deputy Vice Chancellor Award, UBCO</li>
+          </ul>
+        </li>
+        <li>
+          <span class="timeline-date">2023</span>
+          <ul class="timeline-group">
+            <li>Amateur Radio Operator Certificate, Basic with Honours</li>
+            <li>Received the Deputy Vice Chancellor Award, UBCO</li>
+          </ul>
+        </li>
+        <li>
+          <span class="timeline-date">2022</span>
+          <ul class="timeline-group">
+            <li>Received the BC Achievement Scholarship Award</li>
+            <li>Gateway to Technology Certificate</li>
+            <li>Received the District Project Scholarship Award</li>
+            <li>Receive the Diplôme D’Études en Langue Française (DELF) at the B1 level</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Awards & Skills</h2>
-    <p>placeholder</p>
-  </section>
+    <section class="about-section" id="skills">
+      <h2><span class="section-icon" aria-hidden="true">🧰</span>Skills</h2>
+      <ul class="skills-list">
+        <li>Problem solving</li>
+        <li>Organization</li>
+        <li>Critical thinking</li>
+        <li>Troubleshooting</li>
+        <li>Teamwork</li>
+        <li>Punctual</li>
+        <li>Time management</li>
+        <li>Data structures and algorithms</li>
+        <li>Database design</li>
+        <li>Object-oriented programming</li>
+        <li>DevOps</li>
+      </ul>
+    </section>
+    </div>
+
+    <aside class="about-toc" aria-label="On this page">
+      <h2 class="about-toc-title">On This Page</h2>
+      <nav>
+        <ul>
+          <li><a href="#quick-facts">Quick Facts</a></li>
+          <li><a href="#currently-exploring">Currently Exploring</a></li>
+          <li><a href="#awards-certificates">Awards & Certificates</a></li>
+          <li><a href="#skills">Skills</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
 </BaseLayout>
