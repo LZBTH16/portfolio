@@ -1181,6 +1181,11 @@ body.project-viewer-open {
   color: var(--accent-strong);
 }
 
+.mobile-toc-open,
+.mobile-toc-close {
+  display: none;
+}
+
 @media (max-width: 900px) {
   .project-detail-screenshots {
     grid-template-columns: 1fr;
@@ -1310,5 +1315,82 @@ body.project-viewer-open {
   .hero-links {
     grid-template-columns: 1fr;
     max-width: 320px;
+  }
+
+  .mobile-toc-open {
+    display: inline-flex;
+    position: fixed;
+    top: 88px;
+    right: 20px;
+    z-index: 1200;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg-elev);
+    color: var(--text-main);
+    font-size: 1.3rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  }
+
+  .mobile-floating-toc {
+    position: fixed;
+    top: 88px;
+    right: 20px;
+    z-index: 1201;
+    width: min(320px, calc(100vw - 40px));
+    max-height: 70vh;
+    overflow: auto;
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .about-page .about-toc.mobile-floating-toc,
+  .projects-page .projects-toc.mobile-floating-toc,
+  .project-detail-page .project-detail-toc.mobile-floating-toc {
+    position: fixed;
+    top: 88px;
+    right: 20px;
+    z-index: 1201;
+  }
+
+  .mobile-floating-toc.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .mobile-floating-toc .mobile-toc-close {
+    display: inline-flex;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--surface);
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .mobile-floating-toc .mobile-toc-title,
+  .mobile-floating-toc .projects-toc-title,
+  .mobile-floating-toc .project-detail-toc-title,
+  .mobile-floating-toc .about-toc-title {
+    padding-right: 40px;
   }
 }

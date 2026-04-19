@@ -142,8 +142,109 @@ const base = import.meta.env.BASE_URL;
         });
       };
 
+      const initMobilePageToc = () => {
+        document.querySelectorAll('.mobile-toc-open').forEach((button) => button.remove());
+
+        const toc = document.querySelector(
+          '.about-page .about-toc, .projects-page .projects-toc, .project-detail-page .project-detail-toc'
+        );
+
+        if (!(toc instanceof HTMLElement)) return;
+
+        toc.classList.add('mobile-floating-toc');
+
+        if (!toc.id) {
+          toc.id = `page-toc-${Math.random().toString(36).slice(2, 8)}`;
+        }
+
+        let closeButton = toc.querySelector('.mobile-toc-close');
+        if (!(closeButton instanceof HTMLButtonElement)) {
+          const createdCloseButton = document.createElement('button') as HTMLButtonElement;
+          createdCloseButton.type = 'button';
+          createdCloseButton.className = 'mobile-toc-close';
+          createdCloseButton.setAttribute('aria-label', 'Close on this page menu');
+          createdCloseButton.textContent = 'x';
+          toc.prepend(createdCloseButton);
+          closeButton = createdCloseButton;
+        }
+
+        const resolvedCloseButton = closeButton as unknown as HTMLButtonElement;
+
+        const openButton = document.createElement('button');
+        openButton.type = 'button';
+        openButton.className = 'mobile-toc-open';
+        openButton.setAttribute('aria-label', 'Open on this page menu');
+        openButton.setAttribute('aria-controls', toc.id);
+        openButton.textContent = '≡';
+        document.body.appendChild(openButton);
+
+        const closeMenu = () => {
+          toc.classList.remove('is-open');
+          openButton.setAttribute('aria-expanded', 'false');
+        };
+
+        const openMenu = () => {
+          toc.classList.add('is-open');
+          openButton.setAttribute('aria-expanded', 'true');
+          resolvedCloseButton.focus();
+        };
+
+        const updateAnchorPosition = () => {
+          const header = document.querySelector('.site-header');
+          let top = 88;
+
+          if (header instanceof HTMLElement) {
+            const headerBottom = Math.round(header.getBoundingClientRect().bottom);
+            top = Math.max(72, headerBottom + 8);
+          }
+
+          const topValue = `${top}px`;
+          openButton.style.top = topValue;
+          toc.style.top = topValue;
+        };
+
+        const syncForViewport = () => {
+          const isMobile = window.matchMedia('(max-width: 900px)').matches;
+
+          updateAnchorPosition();
+
+          if (!isMobile) {
+            toc.classList.remove('is-open');
+            openButton.hidden = true;
+            return;
+          }
+
+          openButton.hidden = toc.classList.contains('is-open');
+        };
+
+        openButton.addEventListener('click', () => {
+          openMenu();
+          syncForViewport();
+        });
+
+        resolvedCloseButton.addEventListener('click', () => {
+          closeMenu();
+          syncForViewport();
+          openButton.focus();
+        });
+
+        toc.querySelectorAll('a').forEach((link) => {
+          link.addEventListener('click', () => {
+            if (!window.matchMedia('(max-width: 900px)').matches) return;
+            closeMenu();
+            syncForViewport();
+          });
+        });
+
+        window.addEventListener('resize', syncForViewport);
+        window.addEventListener('scroll', updateAnchorPosition, { passive: true });
+        syncForViewport();
+      };
+
       document.addEventListener('DOMContentLoaded', initProjectImageViewer);
+      document.addEventListener('DOMContentLoaded', initMobilePageToc);
       document.addEventListener('astro:page-load', initProjectImageViewer);
+      document.addEventListener('astro:page-load', initMobilePageToc);
     </script>
   </body>
 </html>
