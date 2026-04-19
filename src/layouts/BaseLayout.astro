@@ -13,5 +13,132 @@ import "../styles/global.css";
       <Navbar/>
       <slot />
     </main>
+
+    <script>
+      const initProjectImageViewer = () => {
+        if (document.querySelector('.project-image-viewer')) return;
+
+        const images = Array.from(document.querySelectorAll<HTMLImageElement>('.project-screenshot-card .project-screenshot-image'));
+        if (!images.length) return;
+
+        const viewer = document.createElement('div');
+        viewer.className = 'project-image-viewer';
+        viewer.hidden = true;
+        viewer.innerHTML = `
+          <div class="project-image-viewer-panel" role="dialog" aria-modal="true" aria-label="Project image viewer">
+            <div class="project-image-viewer-header">
+              <p class="project-image-viewer-caption"></p>
+              <button type="button" class="project-image-viewer-close" aria-label="Close image viewer">Close</button>
+            </div>
+            <div class="project-image-viewer-frame">
+              <button type="button" class="project-image-viewer-nav project-image-viewer-prev" aria-label="Previous image">‹</button>
+              <img class="project-image-viewer-image" alt="" />
+              <button type="button" class="project-image-viewer-nav project-image-viewer-next" aria-label="Next image">›</button>
+            </div>
+          </div>
+        `;
+
+        document.body.appendChild(viewer);
+
+        const viewerImage = viewer.querySelector('.project-image-viewer-image') as HTMLImageElement | null;
+        const caption = viewer.querySelector('.project-image-viewer-caption') as HTMLParagraphElement | null;
+        const closeButton = viewer.querySelector('.project-image-viewer-close') as HTMLButtonElement | null;
+        const prevButton = viewer.querySelector('.project-image-viewer-prev') as HTMLButtonElement | null;
+        const nextButton = viewer.querySelector('.project-image-viewer-next') as HTMLButtonElement | null;
+
+        if (!viewerImage || !caption || !closeButton || !prevButton || !nextButton) {
+          return;
+        }
+
+        const resolvedViewerImage = viewerImage as HTMLImageElement;
+        const resolvedCaption = caption as HTMLParagraphElement;
+        const resolvedCloseButton = closeButton as HTMLButtonElement;
+        const resolvedPrevButton = prevButton as HTMLButtonElement;
+        const resolvedNextButton = nextButton as HTMLButtonElement;
+
+        let currentIndex = 0;
+        let lastTrigger: HTMLElement | null = null;
+
+        const getCaptionText = (image: HTMLImageElement) => {
+          const figureCaption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
+          return figureCaption || image.alt || '';
+        };
+
+        const updateViewer = () => {
+          const image = images[currentIndex];
+          resolvedViewerImage.src = image.src;
+          resolvedViewerImage.alt = image.alt || '';
+          resolvedCaption.textContent = getCaptionText(image);
+        };
+
+        const openViewer = (index: number, trigger: HTMLElement | null) => {
+          currentIndex = index;
+          lastTrigger = trigger || null;
+          updateViewer();
+          viewer.hidden = false;
+          document.body.classList.add('project-viewer-open');
+          resolvedCloseButton.focus();
+        };
+
+        const closeViewer = () => {
+          viewer.hidden = true;
+          document.body.classList.remove('project-viewer-open');
+          if (lastTrigger) {
+            lastTrigger.focus();
+          }
+        };
+
+        const goToImage = (nextIndex: number) => {
+          currentIndex = (nextIndex + images.length) % images.length;
+          updateViewer();
+        };
+
+        images.forEach((image, index) => {
+          image.tabIndex = 0;
+          image.setAttribute('role', 'button');
+          image.setAttribute('aria-label', `Open ${getCaptionText(image)} in a larger viewer`);
+
+          image.addEventListener('click', () => {
+            openViewer(index, image);
+          });
+          image.addEventListener('keydown', (event) => {
+            const keyboardEvent = event as KeyboardEvent;
+
+            if (keyboardEvent.key === 'Enter' || keyboardEvent.key === ' ') {
+              keyboardEvent.preventDefault();
+              openViewer(index, image);
+            }
+          });
+        });
+
+        resolvedCloseButton.addEventListener('click', closeViewer);
+        resolvedPrevButton.addEventListener('click', () => goToImage(currentIndex - 1));
+        resolvedNextButton.addEventListener('click', () => goToImage(currentIndex + 1));
+
+        viewer.addEventListener('click', (event) => {
+          if (event.target === viewer) {
+            closeViewer();
+          }
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (viewer.hidden) return;
+
+          if (event.key === 'Escape') {
+            event.preventDefault();
+            closeViewer();
+          } else if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            goToImage(currentIndex - 1);
+          } else if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            goToImage(currentIndex + 1);
+          }
+        });
+      };
+
+      document.addEventListener('DOMContentLoaded', initProjectImageViewer);
+      document.addEventListener('astro:page-load', initProjectImageViewer);
+    </script>
   </body>
 </html>

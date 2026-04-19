@@ -757,6 +757,98 @@ p {
   background: var(--surface-hover);
 }
 
+.project-image-viewer[hidden] {
+  display: none;
+}
+
+.project-image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(12, 12, 16, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.project-image-viewer-panel {
+  width: min(92vw, 1200px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-image-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-image-viewer-caption {
+  margin: 0;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.project-image-viewer-close,
+.project-image-viewer-nav {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.project-image-viewer-close {
+  padding: 10px 14px;
+  font-weight: 700;
+}
+
+.project-image-viewer-frame {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 0;
+}
+
+.project-image-viewer-image {
+  display: block;
+  width: 100%;
+  max-height: calc(92vh - 92px);
+  object-fit: contain;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg-elev);
+}
+
+.project-image-viewer-nav {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.project-image-viewer-close:hover,
+.project-image-viewer-close:focus-visible,
+.project-image-viewer-nav:hover,
+.project-image-viewer-nav:focus-visible {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+}
+
+body.project-viewer-open {
+  overflow: hidden;
+}
+
 /* CARDS */
 .card {
   border: 1px solid var(--border);
