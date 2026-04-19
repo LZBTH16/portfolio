@@ -887,7 +887,8 @@ body.project-viewer-open {
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--border);
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .tech-stack-grid {
@@ -1135,6 +1136,11 @@ body.project-viewer-open {
     grid-template-columns: 1fr;
   }
 
+  .cosc-341-project-page .project-detail-screenshots {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
   .project-detail-page.project-detail-layout {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -1173,6 +1179,18 @@ body.project-viewer-open {
     top: auto;
   }
 
+  .about-page .skills-list {
+    grid-template-columns: 1fr;
+  }
+
+  .about-page .skills-list li {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    min-height: auto;
+    line-height: 1.4;
+  }
+
   .site-nav {
     gap: 12px;
     padding: 14px 16px;
@@ -1201,6 +1219,17 @@ body.project-viewer-open {
 
   .tech-stack-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 360px;
+    margin-inline: auto;
+  }
+
+  .tech-stack-grid .tech-card {
+    height: auto;
+  }
+
+  .tech-stack-grid .card:hover {
+    transform: none;
   }
 
   .projects-page .projects-featured-grid {
