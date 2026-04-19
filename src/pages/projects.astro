@@ -11,8 +11,8 @@ const base = import.meta.env.BASE_URL;
       <section class="projects-section" id="featured-projects">
         <h2>Featured Projects</h2>
         <div class="projects-featured-grid">
-        <article class="card project-card">
-          <h3><a class="project-title-link" href={`${base}projects/sim-ester`}>Sim-ester | E-Commerce Website</a></h3>
+        <article class="card project-card project-card-clickable" data-card-link={`${base}projects/sim-ester`} aria-label="Open Sim-ester project page">
+          <h3>Sim-ester | E-Commerce Website</h3>
           <p class="project-associated">Associated with: UBC Okanagan - COSC 304</p>
           <p class="project-stack-label">Tech Stack</p>
           <div class="project-stack-list">
@@ -28,13 +28,12 @@ const base = import.meta.env.BASE_URL;
             Sim-ester is a website that was developed for the COSC 304 project. It is an online store that sells products depicting simulation-style games based on courses at UBC Okanagan.
           </p>
           <div class="project-links">
-            <a class="project-link" href={`${base}projects/sim-ester`}>View details</a>
             <a class="project-link" href="https://github.com/LZBTH16/sim-ester" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
 
-        <article class="card project-card">
-          <h3><a class="project-title-link" href={`${base}projects/collabium`}>Collabium | Task Management App</a></h3>
+        <article class="card project-card project-card-clickable" data-card-link={`${base}projects/collabium`} aria-label="Open Collabium project page">
+          <h3>Collabium | Task Management App</h3>
           <p class="project-associated">Associated with: UBC Okanagan - COSC 310</p>
           <p class="project-stack-label">Tech Stack</p>
           <div class="project-stack-list">
@@ -47,13 +46,12 @@ const base = import.meta.env.BASE_URL;
             Collabium is a full-stack web application designed to help teams manage tasks efficiently with features like secure user authentication, role-based access, task filtering, and an admin dashboard.
           </p>
           <div class="project-links">
-            <a class="project-link" href={`${base}projects/collabium`}>View details</a>
             <a class="project-link" href="https://github.com/KianShirvani/Collabium---Task-Management-Platform" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
 
-        <article class="card project-card">
-          <h3><a class="project-title-link" href={`${base}projects/amazebike`}>AmazeBike | Unity WebGL Game</a></h3>
+        <article class="card project-card project-card-clickable" data-card-link={`${base}projects/amazebike`} aria-label="Open AmazeBike project page">
+          <h3>AmazeBike | Unity WebGL Game</h3>
           <p class="project-associated">Associated with: UBC Okanagan - COSC 416</p>
           <p class="project-stack-label">Tech Stack</p>
           <div class="project-stack-list">
@@ -65,7 +63,6 @@ const base = import.meta.env.BASE_URL;
             Built collaboratively with a team of three for our COSC 416 final project, AmazeBike is a Unity-based 3D platformer inspired by Excitebike.
           </p>
           <div class="project-links">
-            <a class="project-link" href={`${base}projects/amazebike`}>View details</a>
             <a class="project-link" href="https://github.com/Zubdragon047/cosc416project" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
         </article>
@@ -85,7 +82,7 @@ const base = import.meta.env.BASE_URL;
         <div class="year-panel active" id="projects-year-2026" role="tabpanel" data-year-panel="2026" hidden>
           <div class="projects-year-grid">
 
-            <article class="card project-card project-card-secondary">
+            <article class="card project-card project-card-secondary project-card-clickable" data-card-link={`${base}projects/cosc-341-project`} aria-label="Open COSC 341 project page">
               <p class="project-year">2026</p>
               <h3>COSC 341 Project</h3>
               <p class="project-associated">Associated with: UBC Okanagan - COSC 341</p>
@@ -100,7 +97,6 @@ const base = import.meta.env.BASE_URL;
                 addresses the current lack of a unified lost and found process by providing a single platform for managing 
                 lost and found items.</p>
               <div class="project-links">
-                <a class="project-link" href={`${base}projects/cosc-341-project`}>View details</a>
                 <a class="project-link" href="https://github.com/LZBTH16/COSC341Project" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </article>
@@ -391,6 +387,33 @@ const base = import.meta.env.BASE_URL;
     tab.addEventListener("click", () => {
       const year = tab.dataset.yearTarget;
       if (year) activateYear(year);
+    });
+  });
+
+  const clickableProjectCards = document.querySelectorAll(".project-card-clickable[data-card-link]");
+
+  const isInteractiveTarget = (target) => {
+    if (!target) return false;
+    return Boolean(target.closest("a, button, input, textarea, select, summary, [role='button']"));
+  };
+
+  clickableProjectCards.forEach((card) => {
+    const href = card.dataset.cardLink;
+    if (!href) return;
+
+    card.setAttribute("role", "link");
+    card.setAttribute("tabindex", "0");
+
+    card.addEventListener("click", (event) => {
+      if (isInteractiveTarget(event.target)) return;
+      window.location.href = href;
+    });
+
+    card.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      if (isInteractiveTarget(event.target)) return;
+      event.preventDefault();
+      window.location.href = href;
     });
   });
 

@@ -284,6 +284,32 @@ p {
   align-self: start;
 }
 
+.projects-page .project-card-clickable {
+  cursor: pointer;
+}
+
+.projects-page .project-card-clickable h3 {
+  transition: color 0.2s ease;
+}
+
+.projects-page .project-card-clickable:hover h3,
+.projects-page .project-card-clickable:focus-visible h3 {
+  color: var(--accent-strong);
+}
+
+.projects-page .project-card:not(.project-card-clickable):hover {
+  transform: none;
+  border-color: var(--accent);
+  background-color: var(--surface-hover);
+}
+
+.projects-page .project-card-clickable:hover,
+.projects-page .project-card-clickable:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background-color: var(--surface-hover);
+}
+
 .projects-page .project-year {
   margin: 0 0 10px;
   color: var(--accent-strong);
@@ -483,6 +509,23 @@ p {
 
 .projects-page .project-card-secondary .project-links {
   margin-top: auto;
+}
+
+.featured-project-card {
+  display: block;
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.featured-project-card:hover,
+.featured-project-card:focus-visible {
+  color: var(--text-main);
+  text-decoration: none;
+}
+
+.featured-project-card:hover h3,
+.featured-project-card:focus-visible h3 {
+  color: var(--accent-strong);
 }
 
 /* PROJECT DETAIL PAGES */
@@ -889,6 +932,7 @@ body.project-viewer-open {
   border-bottom: 1px solid var(--border);
   white-space: normal;
   overflow-wrap: anywhere;
+  transition: color 0.2s ease;
 }
 
 .tech-stack-grid {
@@ -900,6 +944,12 @@ body.project-viewer-open {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: none;
+  border-color: var(--accent);
+  background-color: var(--surface-hover);
 }
 
 .tech-card h3 {
@@ -1054,7 +1104,7 @@ body.project-viewer-open {
 }
 
 .about-page .skills-list li:hover {
-  transform: translateY(-3px);
+  transform: none;
   border-color: var(--accent);
   background-color: var(--surface-hover);
 }
