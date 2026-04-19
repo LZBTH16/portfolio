@@ -32,7 +32,11 @@ const base = import.meta.env.BASE_URL;
           <div class="project-image-viewer-panel" role="dialog" aria-modal="true" aria-label="Project image viewer">
             <div class="project-image-viewer-header">
               <p class="project-image-viewer-caption"></p>
-              <button type="button" class="project-image-viewer-close" aria-label="Close image viewer">Close</button>
+              <div class="project-image-viewer-header-actions">
+                <button type="button" class="project-image-viewer-mobile-nav project-image-viewer-mobile-prev" aria-label="Previous image">‹</button>
+                <button type="button" class="project-image-viewer-mobile-nav project-image-viewer-mobile-next" aria-label="Next image">›</button>
+                <button type="button" class="project-image-viewer-close" aria-label="Close image viewer">Close</button>
+              </div>
             </div>
             <div class="project-image-viewer-frame">
               <button type="button" class="project-image-viewer-nav project-image-viewer-prev" aria-label="Previous image">‹</button>
@@ -49,6 +53,8 @@ const base = import.meta.env.BASE_URL;
         const closeButton = viewer.querySelector('.project-image-viewer-close') as HTMLButtonElement | null;
         const prevButton = viewer.querySelector('.project-image-viewer-prev') as HTMLButtonElement | null;
         const nextButton = viewer.querySelector('.project-image-viewer-next') as HTMLButtonElement | null;
+        const mobilePrevButton = viewer.querySelector('.project-image-viewer-mobile-prev') as HTMLButtonElement | null;
+        const mobileNextButton = viewer.querySelector('.project-image-viewer-mobile-next') as HTMLButtonElement | null;
 
         if (!viewerImage || !caption || !closeButton || !prevButton || !nextButton) {
           return;
@@ -62,6 +68,8 @@ const base = import.meta.env.BASE_URL;
 
         let currentIndex = 0;
         let lastTrigger: HTMLElement | null = null;
+        let touchStartX = 0;
+        let touchStartY = 0;
 
         const getCaptionText = (image: HTMLImageElement) => {
           const figureCaption = image.closest('figure')?.querySelector('figcaption')?.textContent?.trim();
@@ -97,6 +105,22 @@ const base = import.meta.env.BASE_URL;
           updateViewer();
         };
 
+        const handleSwipe = (endX: number, endY: number) => {
+          const deltaX = endX - touchStartX;
+          const deltaY = endY - touchStartY;
+
+          // Only act on intentional horizontal swipes.
+          if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY)) {
+            return;
+          }
+
+          if (deltaX > 0) {
+            goToImage(currentIndex - 1);
+          } else {
+            goToImage(currentIndex + 1);
+          }
+        };
+
         images.forEach((image, index) => {
           image.tabIndex = 0;
           image.setAttribute('role', 'button');
@@ -118,6 +142,8 @@ const base = import.meta.env.BASE_URL;
         resolvedCloseButton.addEventListener('click', closeViewer);
         resolvedPrevButton.addEventListener('click', () => goToImage(currentIndex - 1));
         resolvedNextButton.addEventListener('click', () => goToImage(currentIndex + 1));
+        mobilePrevButton?.addEventListener('click', () => goToImage(currentIndex - 1));
+        mobileNextButton?.addEventListener('click', () => goToImage(currentIndex + 1));
 
         viewer.addEventListener('click', (event) => {
           if (event.target === viewer) {
@@ -139,6 +165,18 @@ const base = import.meta.env.BASE_URL;
             goToImage(currentIndex + 1);
           }
         });
+
+        resolvedViewerImage.addEventListener('touchstart', (event) => {
+          const touch = event.changedTouches[0];
+          touchStartX = touch.clientX;
+          touchStartY = touch.clientY;
+        }, { passive: true });
+
+        resolvedViewerImage.addEventListener('touchend', (event) => {
+          if (viewer.hidden) return;
+          const touch = event.changedTouches[0];
+          handleSwipe(touch.clientX, touch.clientY);
+        }, { passive: true });
       };
 
       const initMobilePageToc = () => {

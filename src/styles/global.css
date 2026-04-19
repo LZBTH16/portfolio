@@ -901,6 +901,12 @@ p {
   gap: 12px;
 }
 
+.project-image-viewer-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .project-image-viewer-caption {
   margin: 0;
   color: var(--text-main);
@@ -913,6 +919,21 @@ p {
   border-radius: 10px;
   background: var(--surface);
   color: var(--text-main);
+  cursor: pointer;
+}
+
+.project-image-viewer-mobile-nav {
+  display: none;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text-main);
+  font-size: 1.25rem;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -959,8 +980,19 @@ p {
   background: var(--surface-hover);
 }
 
+.project-image-viewer-mobile-nav:hover,
+.project-image-viewer-mobile-nav:focus-visible {
+  border-color: var(--accent);
+  background: var(--surface-hover);
+}
+
 body.project-viewer-open {
   overflow: hidden;
+}
+
+body.project-viewer-open .mobile-toc-open,
+body.project-viewer-open .mobile-floating-toc {
+  display: none !important;
 }
 
 /* CARDS */
@@ -1380,6 +1412,14 @@ body.project-viewer-open {
   .hero-links {
     grid-template-columns: 1fr;
     max-width: 320px;
+  }
+
+  .project-image-viewer-frame .project-image-viewer-nav {
+    display: none;
+  }
+
+  .project-image-viewer-mobile-nav {
+    display: inline-flex;
   }
 
   .mobile-toc-open {
