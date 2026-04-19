@@ -9,7 +9,17 @@ const base = import.meta.env.BASE_URL;
       <span class="site-title">Elizabeth's Portfolio</span>
     </a>
 
-    <div class="site-nav-links">
+    <button
+      class="site-nav-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="primary-site-nav-links"
+    >
+      ☰
+    </button>
+
+    <div class="site-nav-links" id="primary-site-nav-links">
       <a href={base}>Home</a>
       <a href={`${base}about`}>About</a>
       <a href={`${base}projects`}>Projects</a>
@@ -19,6 +29,10 @@ const base = import.meta.env.BASE_URL;
 
 <script is:inline>
   const siteHeader = document.querySelector(".site-header");
+  const siteNav = document.querySelector(".site-nav");
+  const navToggle = document.querySelector(".site-nav-toggle");
+  const navLinks = document.querySelector(".site-nav-links");
+  const siteBrand = document.querySelector(".site-brand");
 
   if (siteHeader) {
     let lastScrollY = window.scrollY;
@@ -39,5 +53,45 @@ const base = import.meta.env.BASE_URL;
 
     window.addEventListener("scroll", onScroll, { passive: true });
     onScroll();
+  }
+
+  if (siteNav && navToggle && navLinks) {
+    const updateNavCollapseState = () => {
+      const shouldCollapse = window.matchMedia("(max-width: 600px)").matches;
+
+      if (shouldCollapse) {
+        siteNav.classList.add("is-collapsed");
+        navToggle.setAttribute("aria-expanded", "false");
+      } else {
+        siteNav.classList.remove("is-collapsed", "is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    };
+
+    const closeNavMenu = () => {
+      siteNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+
+    const openNavMenu = () => {
+      siteNav.classList.add("is-open");
+      navToggle.setAttribute("aria-expanded", "true");
+    };
+
+    navToggle.addEventListener("click", () => {
+      if (!siteNav.classList.contains("is-collapsed")) return;
+      if (siteNav.classList.contains("is-open")) {
+        closeNavMenu();
+      } else {
+        openNavMenu();
+      }
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", closeNavMenu);
+    });
+
+    window.addEventListener("resize", updateNavCollapseState);
+    updateNavCollapseState();
   }
 </script>

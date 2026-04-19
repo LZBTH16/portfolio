@@ -17,6 +17,7 @@ body {
   padding: 0;
   line-height: 1.6;
   color: var(--text-main);
+  overflow-x: hidden;
   background:
     radial-gradient(circle at 10% 0%, rgba(161, 102, 255, 0.2), transparent 35%),
     radial-gradient(circle at 90% 100%, rgba(191, 140, 255, 0.16), transparent 30%),
@@ -55,6 +56,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;
   gap: 18px;
   padding: 20px 22px;
   margin: 0;
@@ -69,6 +71,7 @@ main {
   display: inline-flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
   text-decoration: none;
 }
 
@@ -94,7 +97,61 @@ main {
 .site-nav-links {
   display: flex;
   align-items: center;
+  flex-wrap: nowrap;
   gap: 22px;
+}
+
+.site-nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  border: 1px solid rgba(241, 229, 255, 0.55);
+  border-radius: 8px;
+  background: transparent;
+  color: #f3e9ff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-nav.is-collapsed {
+  flex-wrap: wrap;
+}
+
+.site-nav.is-collapsed .site-nav-toggle {
+  display: inline-flex;
+}
+
+.site-nav.is-collapsed .site-nav-links {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.site-nav.is-collapsed.is-open .site-nav-links {
+  display: flex;
+}
+
+.site-nav.is-collapsed .site-nav-links a {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+}
+
+.site-nav.is-measuring .site-nav-toggle {
+  display: none !important;
+}
+
+.site-nav.is-measuring .site-nav-links {
+  display: flex !important;
 }
 
 .site-nav a {
@@ -1247,8 +1304,13 @@ body.project-viewer-open {
   }
 
   .site-nav {
+    position: relative;
     gap: 12px;
     padding: 14px 16px;
+  }
+
+  .site-brand {
+    flex: 1;
   }
 
   .site-brand-image {
@@ -1257,7 +1319,10 @@ body.project-viewer-open {
   }
 
   .site-title {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .site-nav-links {
