@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout>
+<BaseLayout title="COSC 341 Project | Projects | Elizabeth's Portfolio">
   <div class="project-detail-page project-detail-layout cosc-341-project-page">
     <div class="project-detail-content">
     <section class="project-detail-hero" id="project-summary">
-      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <a class="project-detail-back-link" href={`${base}projects`}>← Back to Projects</a>
       <h1>COSC 341 Project | Lost &amp; Found App</h1>
       <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 341</p>
       <p class="project-detail-stack-label">Tech Stack</p>
@@ -51,39 +52,39 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2>Screenshots</h2>
       <div class="project-detail-screenshots">
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/home-page.png" alt="COSC 341 home page screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/home-page.png`} alt="COSC 341 home page screen" loading="lazy" />
           <figcaption>Home Page</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/add-listing.png" alt="COSC 341 add listing screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/add-listing.png`} alt="COSC 341 add listing screen" loading="lazy" />
           <figcaption>Add Listing</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/posted-listing.png" alt="COSC 341 posted listing screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/posted-listing.png`} alt="COSC 341 posted listing screen" loading="lazy" />
           <figcaption>Posted Listing</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/view-listing.png" alt="COSC 341 view listing screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/view-listing.png`} alt="COSC 341 view listing screen" loading="lazy" />
           <figcaption>View Listing</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/active-listings.png" alt="COSC 341 active listings screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/active-listings.png`} alt="COSC 341 active listings screen" loading="lazy" />
           <figcaption>Active Listings</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/edit-listing.png" alt="COSC 341 edit listing screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/edit-listing.png`} alt="COSC 341 edit listing screen" loading="lazy" />
           <figcaption>Edit Listing</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/item-claim-form.png" alt="COSC 341 item claim form screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/item-claim-form.png`} alt="COSC 341 item claim form screen" loading="lazy" />
           <figcaption>Item Claim Form</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/claim-requests.png" alt="COSC 341 claim requests screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/claim-requests.png`} alt="COSC 341 claim requests screen" loading="lazy" />
           <figcaption>Claim Requests</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image project-screenshot-phone" src="/images/projects/cosc-341/browse.png" alt="COSC 341 browse screen" loading="lazy" />
+          <img class="project-screenshot-image project-screenshot-phone" src={`${base}images/projects/cosc-341/browse.png`} alt="COSC 341 browse screen" loading="lazy" />
           <figcaption>Browse</figcaption>
         </figure>
       </div>

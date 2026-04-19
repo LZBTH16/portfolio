@@ -662,6 +662,20 @@ p {
   padding-left: 20px;
 }
 
+.project-detail-hero > p:not(.project-detail-meta):not(.project-detail-stack-label),
+.project-detail-card p,
+.project-detail-list li {
+  color: var(--text-muted);
+}
+
+.project-detail-list li {
+  color: var(--text-muted);
+}
+
+.project-detail-list li::marker {
+  color: var(--text-muted);
+}
+
 .project-detail-list li + li {
   margin-top: 8px;
 }

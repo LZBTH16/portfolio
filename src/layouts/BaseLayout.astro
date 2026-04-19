@@ -1,12 +1,16 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import "../styles/global.css";
+
+const { title = "Elizabeth's Portfolio" } = Astro.props;
+const base = import.meta.env.BASE_URL;
 ---
 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>My Portfolio</title>
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href={`${base}portfolio-logo.png`} />
   </head>
   <body>
     <main>

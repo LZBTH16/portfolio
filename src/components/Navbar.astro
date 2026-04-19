@@ -1,14 +1,18 @@
+---
+const base = import.meta.env.BASE_URL;
+---
+
 <header class="site-header" data-nav-state="full">
   <nav class="site-nav" aria-label="Primary">
-    <a class="site-brand" href="/" aria-label="Go to home page">
-      <img class="site-brand-image" src="/portfolio-logo.png" alt="Profile" loading="lazy" decoding="async" />
+    <a class="site-brand" href={base} aria-label="Go to home page">
+      <img class="site-brand-image" src={`${base}portfolio-logo.png`} alt="Profile" loading="lazy" decoding="async" />
       <span class="site-title">Elizabeth's Portfolio</span>
     </a>
 
     <div class="site-nav-links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/projects">Projects</a>
+      <a href={base}>Home</a>
+      <a href={`${base}about`}>About</a>
+      <a href={`${base}projects`}>Projects</a>
     </div>
   </nav>
 </header>

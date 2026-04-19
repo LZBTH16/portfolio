@@ -1,20 +1,21 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout>
+<BaseLayout title="Home | Elizabeth's Portfolio">
 	<!-- HERO -->
 	<section class="hero">
 		<h1>Hi, I'm Elizabeth!</h1>
 		<p>Exploring Cybersecurity & Network Systems | Collaboration Driven | Innovating Through Code</p>
 
 		<div class="hero-links">
-		<a class="card hero-link-card" href="/projects">
+		<a class="card hero-link-card" href={`${base}projects`}>
 			<span class="hero-link-title">View Projects</span>
 			<span class="hero-link-divider" aria-hidden="true"></span>
 			<span class="hero-link-description">Explore featured builds and collaborative work.</span>
 		</a>
-		<a class="card hero-link-card" href="/about">
+		<a class="card hero-link-card" href={`${base}about`}>
 			<span class="hero-link-title">About Me</span>
 			<span class="hero-link-divider" aria-hidden="true"></span>
 			<span class="hero-link-description">Read more about my background and interests.</span>

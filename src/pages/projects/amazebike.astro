@@ -1,12 +1,13 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
 ---
 
-<BaseLayout>
+<BaseLayout title="AmazeBike | Projects | Elizabeth's Portfolio">
   <div class="project-detail-page project-detail-layout">
     <div class="project-detail-content">
     <section class="project-detail-hero" id="project-summary">
-      <a class="project-detail-back-link" href="/projects">← Back to Projects</a>
+      <a class="project-detail-back-link" href={`${base}projects`}>← Back to Projects</a>
       <h1>AmazeBike | Unity WebGL Game</h1>
       <p class="project-detail-meta">Associated with: UBC Okanagan - COSC 416</p>
       <p class="project-detail-stack-label">Tech Stack</p>
@@ -58,27 +59,27 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
       <h2>Screenshots</h2>
       <div class="project-detail-screenshots">
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/main-menu.png" alt="AmazeBike main menu screen" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/main-menu.png`} alt="AmazeBike main menu screen" loading="lazy" />
           <figcaption>Main Menu</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/controls.png" alt="AmazeBike controls screen" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/controls.png`} alt="AmazeBike controls screen" loading="lazy" />
           <figcaption>Controls</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-before-starting.png" alt="AmazeBike tutorial screen before starting" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/tutorial-before-starting.png`} alt="AmazeBike tutorial screen before starting" loading="lazy" />
           <figcaption>Tutorial Before Starting</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-while-playing-1.png" alt="AmazeBike tutorial while playing screen one" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/tutorial-while-playing-1.png`} alt="AmazeBike tutorial while playing screen one" loading="lazy" />
           <figcaption>Tutorial While Playing 1</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/tutorial-while-playing-2.png" alt="AmazeBike tutorial while playing screen two" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/tutorial-while-playing-2.png`} alt="AmazeBike tutorial while playing screen two" loading="lazy" />
           <figcaption>Tutorial While Playing 2</figcaption>
         </figure>
         <figure class="project-screenshot-card">
-          <img class="project-screenshot-image" src="/images/projects/amazebike/finish-screen.png" alt="AmazeBike finish screen" loading="lazy" />
+          <img class="project-screenshot-image" src={`${base}images/projects/amazebike/finish-screen.png`} alt="AmazeBike finish screen" loading="lazy" />
           <figcaption>Finish Screen</figcaption>
         </figure>
       </div>
