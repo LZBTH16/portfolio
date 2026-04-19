@@ -1396,7 +1396,7 @@ body.project-viewer-open {
     border-radius: 10px;
     background: var(--bg-elev);
     color: var(--text-main);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
