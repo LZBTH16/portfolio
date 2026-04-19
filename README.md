@@ -2,20 +2,27 @@
 
 Welcome to my personal portfolio website! This site was built using [Astro](https://astro.build/)  to showcase my projects, skills, and experiences.
 
-**Live Site**: **To be added.**
+**Live Site**: [https://lzbth16.github.io/portfolio/](https://lzbth16.github.io/portfolio/)
 
 Hosted with **GitHub Pages**
 
 ## Overview
 
-This portfolio contains:
+This site includes:
 
-- A **Home** page with quick navigation to About, Projects, and Work Experience
-- An **About** page with a personal overview and interests
-- A **Projects** page featuring categorized and featured projects
-- GitHub and LinkedIn links
-- Tech stacks and tools I've worked with
+- **Home** – Introduction and quick navigation to key sections  
+- **About** – Personal background, interests, and goals  
+- **Projects** – Featured and categorized projects  
+- Links to **GitHub** and **LinkedIn**
 
 ## Tech Stack
 
-- TBD
+- Astro
+- JavaScript
+- HTML
+- CSS
+- GitHub Pages (deployment)
+
+## Deployment
+
+Automatically deployed using GitHub Actions to GitHub Pages on push to the `master` branch.
